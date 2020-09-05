@@ -6,9 +6,33 @@ const list = document.querySelector('.cities');
 const clearSearch = document.querySelector('.clear-all');
 
 
-const weatherDescription = JSON.parse(localStorage.getItem("search")) || [];
-console.log(weatherDescription); //yet to fix
+const searchHistory = JSON.parse(localStorage.getItem("history")) || [];
+searchHistory.forEach(element => {
+  const {main, name, sys, weather } = element;
+      const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
+        weather[0]["icon"]
+      }.svg`;
 
+      // html markup
+      const li = document.createElement("li");
+      li.classList.add("city");
+      const markup = `
+        <h2 class="city-timezone" data-name="${name},${sys.country}">
+          <span>${name}</span>
+          <sup>${sys.country}</sup>
+        </h2>
+        <div class="city-temp"><img class="city-icon" src="${icon}" alt="${
+          weather[0]["description"]
+        }">${Math.round(main.temp)}<sup>°C</sup></div>
+        <figure>
+          <figcaption>${weather[0]["description"]}</figcaption>
+        </figure>
+      `;
+
+      list.prepend(li);
+      li.innerHTML = markup;
+});
+  
 
 // myApi Key
 const api = "2c0726ae12d76be3ea5302389c002acd";
@@ -108,6 +132,12 @@ form.addEventListener("submit",  e => {
         weather[0]["icon"]
       }.svg`;
 
+      // push data of users to search history
+      searchHistory.push(data);
+      localStorage.setItem("history",JSON.stringify(searchHistory));
+
+
+
       // html markup
       const li = document.createElement("li");
       li.classList.add("city");
@@ -125,15 +155,9 @@ form.addEventListener("submit",  e => {
       `;
 
       list.prepend(li);
-      li.innerHTML = markup;
-
-      // save the list to local storage
-      // localStorage.setItem("weatherDescription", li.innerHTML);
-      localStorage.setItem("search",JSON.stringify(li.innerHTML));  // yet to fix
-
-      
-  
+      li.innerHTML = markup;      
     })
+
     .catch(() => {
       errorMsg.textContent = "Type in the correct city"
     });
