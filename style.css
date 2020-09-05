@@ -22,7 +22,7 @@ body {
   background-image: url(img/ivcvKj4rmq.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: red;
+  /* background-color: red; */
   width: 30%;
   height: 100vh;
   position: fixed;

@@ -43,8 +43,6 @@ form.addEventListener("submit",  e => {
   let inputVal = inputValue.value;
   
 
-
-
   // if a city have been searched message
   const listItems = list.querySelectorAll(".weather-section .city");
   const listItemsArray = Array.from(listItems);
@@ -135,7 +133,6 @@ form.addEventListener("submit",  e => {
       // push data of users to search history
       searchHistory.push(data);
       localStorage.setItem("history",JSON.stringify(searchHistory));
-
 
 
       // html markup
