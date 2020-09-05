@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WFA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-conntainer">
+    <!-- sidebar section -->
+    <section class="sidebar-header">
+      <div class="sidebar-text">
+        <img src="img/logo-wfa.png" alt="logo">
+        <h1>Weather</h1>
+        <h2><Span>Forcast</Span> App</h2>
+        <form class="form">
+          <p class="error-msg"></p>  
+          <input type="text" class="inputvalue" placeholder="Search for a city">
+          <button type="submit">SEARCH</button><br>
+        </form>
+      </div>
+    </section>
+
+    <!-- weather section -->
+    <section class="weather-section">
+      <div class="container">
+        <button class="clear-all">CLEAR SEARCH</button>
+        <ul class="cities">
+          <!-- <li class="city">
+            <h2 class="city-timezone">
+              <span>Lagos</span>
+              <sup>Ng</sup>
+            </h2>
+            <div class="city-temp"><img class="city-icon" src="icons/haw-weather.svg" alt="icon">28<sup>°C</sup></div>
+            <figure>
+              <figcaption>Light Rain</figcaption>
+            </figure>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
