@@ -118,6 +118,7 @@ form.addEventListener("submit",  e => {
       
     }
   }
+
   
   // weather-info-scetion
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${api}&units=metric`;
@@ -160,8 +161,14 @@ form.addEventListener("submit",  e => {
     });
   errorMsg.textContent="";
   form.reset();
-});
 
+  // clear local storage
+  function clearAll() {
+    window.localStorage.clear();
+    li.innerHTML = "";
+
+  }
+});
 
 
 
