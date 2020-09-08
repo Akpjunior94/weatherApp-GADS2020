@@ -31,37 +31,15 @@ searchHistory.forEach(info => {
 
       list.prepend(li);
       li.innerHTML = markup;
-
-      // clearAll();
 });
 
 // clear local storage
 clearSearch.onclick = function clear() {
-  searchHistory.forEach(info => {
-    const {main, name, sys, weather } = info;
-        const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
-          weather[0]["icon"]
-        }.svg`;
-  
-        // html markup
-        const li = document.createElement("li");
-        li.classList.add("city");
-        const markup = `
-          <h2 class="city-timezone" data-name="${name},${sys.country}">
-            <span>${name}</span>
-            <sup>${sys.country}</sup>
-          </h2>
-          <div class="city-temp"><img class="city-icon" src="${icon}" alt="${
-            weather[0]["description"]
-          }">${Math.round(main.temp)}<sup>°C</sup></div>
-          <figure>
-            <figcaption>${weather[0]["description"]}</figcaption>
-          </figure>
-        `;
-  
-        list.prepend(li);
-        li.innerHTML = markup;
+  const city = document.querySelectorAll('.city');
+  city.forEach(li => {
+    list.removeChild(li);
   });
+  localStorage.clear();
 } 
 
 // myApi Key
