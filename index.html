@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="weather forcast of cities in the world showing the weather city names, countries and the weather conditions ">
   <title>WFA</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="/img/icons/Icon-72-iso.png">
+  <meta name="theme-color" content="#004ef7">
 </head>
 <body>
   <div class="app-conntainer">
@@ -16,7 +21,12 @@
         <h2><Span>Forcast</Span> App</h2>
         <form class="form">
           <p class="error-msg"></p>  
-          <input type="text" class="inputvalue" placeholder="Search for a city">
+          <!-- <label>
+            Enter cities
+            <input type="text" class="inputvalue">
+          </label> -->
+          <input id="search" class="inputvalue" type="text" placeholder="search for a city">
+          <label for="search">.</label>
           <button type="submit">SEARCH</button><br>
         </form>
       </div>
@@ -27,21 +37,12 @@
       <div class="container">
         <button  class="clear-all">CLEAR SEARCH</button>
         <ul class="cities">
-          <!-- <li class="city">
-            <h2 class="city-timezone">
-              <span>Lagos</span>
-              <sup>Ng</sup>
-            </h2>
-            <div class="city-temp"><img class="city-icon" src="icons/haw-weather.svg" alt="icon">28<sup>°C</sup></div>
-            <figure>
-              <figcaption>Light Rain</figcaption>
-            </figure>
-          </li> -->
         </ul>
       </div>
     </section>
   </div>
   
+  <script src="registerSw.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

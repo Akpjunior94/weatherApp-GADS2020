@@ -19,7 +19,7 @@ body {
   display:  flex;
   align-items: center;
   justify-content: center;
-  background-image: url(img/ivcvKj4rmq.jpg);
+  background-image: url(img/ivcvKj4rmq.webp);
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: red; */
@@ -57,9 +57,9 @@ input:focus-within {
 button {
   padding: 5px 30px;
   font-weight: bold;
-  background-color: #44b4e1;
+  background-color: #ffffff;
   border-radius: 20px;
-  color:white;
+  color:rgb(68, 0, 255);
   border: none;
   outline: none;
   cursor: pointer;
@@ -67,6 +67,7 @@ button {
 
 button:hover {
   background-color: #00b7ff;
+  color: white;
 }
 
 .error-msg {
@@ -120,7 +121,7 @@ button:hover {
 /* weather-section ------------------------------------------ */
 
 .weather-section {
-  background-image: url(img/9QKgpuACjU.jpg);
+  background-image: url(img/9QKgpuACjU.webp);
   background-color: #e7e5e6;
   background-repeat: no-repeat;
   background-position: cover;
@@ -210,7 +211,7 @@ ul {
 
   .sidebar-text h1 {
     font-size: 3.5rem;
-    margin: 0;
+    margin: 10px;
   }
 
   .sidebar-text h2 {
@@ -241,6 +242,6 @@ ul {
   }
 
   .sidebar-header {
-    height: 50vh;
+    height: 70vh;
   }
 }
