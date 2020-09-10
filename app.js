@@ -91,41 +91,41 @@ form.addEventListener("submit",  e => {
 
 
   // changing of background for each weather description
-  function init(resultFromServer) {
-    switch (resultFromServer.weather[0].main) {
-      case 'Clear':
-        document.querySelector('.city').style.backgroundimage = 'url(img/clear.jpg)';
-        break;
+  // function init(resultFromServer) {
+  //   switch (resultFromServer.weather[0].main) {
+  //     case 'Clear':
+  //       document.querySelector('.city').style.backgroundimage = 'url(img/clear.jpg)';
+  //       break;
 
-      case 'Rain':
-        document.querySelector('.city').style.backgroundimage = 'url(img/rain.jpg)';
-        break;
+  //     case 'Rain':
+  //       document.querySelector('.city').style.backgroundimage = 'url(img/rain.jpg)';
+  //       break;
 
-      case 'Clouds':
-        document.querySelector('.city').style.backgroundimage = 'url(img/clouds.jpg)';
-        break;
+  //     case 'Clouds':
+  //       document.querySelector('.city').style.backgroundimage = 'url(img/clouds.jpg)';
+  //       break;
 
-      case 'Drizzle':
-        document.querySelector('.city').style.backgroundimage = 'url(img/9QKgpuACjU.jpg)';
-        break;
+  //     case 'Drizzle':
+  //       document.querySelector('.city').style.backgroundimage = 'url(img/9QKgpuACjU.jpg)';
+  //       break;
 
-      case 'Mist':
-        document.querySelector('.city').style.backgroundimage = 'url(img/9QKgpuACjU.jpg)';
-        break;
+  //     case 'Mist':
+  //       document.querySelector('.city').style.backgroundimage = 'url(img/9QKgpuACjU.jpg)';
+  //       break;
 
-      case 'Snow':
-        document.querySelector('.city').style.backgroundimage = 'url(img/snow.jpg)';
-        break;
+  //     case 'Snow':
+  //       document.querySelector('.city').style.backgroundimage = 'url(img/snow.jpg)';
+  //       break;
 
-      case 'Thunderstorm':
-        document.querySelector('.city').style.backgroundimage = 'url(img/thunderstorm.jpg)';
-        break;
+  //     case 'Thunderstorm':
+  //       document.querySelector('.city').style.backgroundimage = 'url(img/thunderstorm.jpg)';
+  //       break;
 
-      default:
-        break;
+  //     default:
+  //       break;
       
-    }
-  }
+  //   }
+  // }
 
   
   // weather-info-scetion
